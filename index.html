@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji J - IT Professional Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+  
+        /* Dark Professional Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; /* Light gray for text */
+    background: linear-gradient(135deg, #0f0f0f, #2b2b2b, #4b4b4b); /* Silver-Black to Dark Grey Gradient */
+    background-attachment: fixed;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Enhanced Background Effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); /* Subtle texture effect */
+    opacity: 0.2; /* Soft background overlay */
+    z-index: -1;
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.08); /* Semi-transparent silver overlay */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Title */
+.title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    color: #c0c0c0; /* Silver effect for luxury */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+.section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border-left: 5px solid #b3b3b3; /* Soft silver line */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff; /* Pure white for contrast */
+}
+
+/* Contact Section */
+.contact a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #b3b3b3;
+    color: #252542;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #ccc;
+    padding: 10px;
+}
+
+        /* Left Column (Profile and Contact) */
+        .left-column {
+            flex: 1;
+            max-width: 300px;
+            margin-right: 40px;
+            text-align: left;
+        }
+
+        /* Right Column (Main Content) */
+        .right-column {
+            flex: 2;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        /* Profile Picture */
+        .profile-pic {
+            width: 150px; /* Slightly larger for desktop */
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ffffff; /* White border */
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        /* Title */
+        .title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 56px; /* Larger font size for desktop */
+            font-weight: 600;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Sections */
+        .section {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 5px solid #ffcc00;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 28px; /* Larger font size for desktop */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .section h2::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #ff6a00;
+            margin-top: 5px;
+            border-radius: 2px;
+        }
+
+        /* Contact Section */
+        .contact a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Download Resume Button */
+        .download-button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .download-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(255, 106, 0, 0.4);
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #ffcc00;
+            color: #252542;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #ccc;
+            padding: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left-column, .right-column {
+                max-width: 100%;
+                margin-right: 0;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            .title {
+                font-size: 48px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+          
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <img src="/storage/emulated/0/Pictures/Picsart/balaji.jpg" alt="Balaji J" class="profile-pic">
+                <h1 class="title">BALAJI J</h1>
+                <h2 class="subtitle"></h2>
+            </div>
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- About Me -->
+            <div class="section about reveal">
+                <h2>About Me</h2>
+                <p>I am a second-year BSc IT student passionate about full-stack development. Currently enhancing my skills in web and software development while preparing for real-world projects.</p>
+            </div>
+
+            <!-- Skills -->
+            <div class="section reveal">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span class="skill">HTML, CSS, JavaScript</span>
+                    <span class="skill">React & Node.js</span>
+                    <span class="skill">Python & Data Analysis</span>
+                    <span class="skill">Cloud Computing (IBM Cloud)</span>
+                    <span class="skill">UI/UX Design</span>
+                </div>
+            </div>
+
+            <!-- Certifications & Achievements -->
+            <div class="section reveal">
+                <h2>Certifications & Achievements</h2>
+                <ul>
+                    <li>IBM Certified Cloud Course</li>
+                    <li>Front-end Web Development Certification</li>
+                    <li>National AI PPT Conference Speaker</li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="section reveal">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>E-commerce Website</strong> - A responsive site with interactive UI.</li>
+                    <li><strong>Python Data Analysis</strong> - Data visualization & analytics project.</li>
+                </ul>
+            </div>
+
+            <!-- Education -->
+            <div class="section reveal">
+                <h2>Education</h2>
+                <p>BSc IT - Vasavi College, Erode (2023-2026)</p>
+            </div>
+        </div>
+    </div>
+        <!-- Contact Section -->
+<div class="section contact reveal">
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:balaji2005it@gmail.com">balaji2005it@gmail.com</a></p>
+    <p>Phone: 8072151070</p>
+    <p>Location: Komarapalayam, 638183</p>
+    <a href="/storage/emulated/0/RESUME/resume.pdf" download="resume.pdf" class="download-button">
+        Download Resume
+    </a>
+</div>
+<div id=""="contact" class="section">
+    <h2>Contact Me</h2>
+    <p style="text-align: center;">
+        <img src="/storage/emulated/0/RESUME/icons8-gmail-48.png" alt="Gmail" width=30"><br>
+       <a href="/storage/emulated/0/balaji2/final/resume.pdf" target="_blank">Open Resume</a>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<style>
+    /* Styling input fields */
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    /* Highlighting the Gmail input box */
+    input[type="email"] {
+        border-color: #ff3c00;  /* Red border */
+        color: #ff3c00;  /* Red text */
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: #ff9800; /* Orange border when focused */
+    }
+</style>
+    <footer>
+        <p>&copy; 2025 Balaji J. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Scroll Animation -->
+    <script>
+        document.addEventListener("scroll", function() {
+            let elements = document.querySelectorAll(".reveal");
+            let windowHeight = window.innerHeight;
+
+            elements.forEach(element => {
+                let position = element.getBoundingClientRect().top;
+                if (position < windowHeight - 100) {
+                    element.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+  
